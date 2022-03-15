@@ -1,0 +1,287 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Smooch Sans', sans-serif;
+  background-color: #282729;
+  color: #b5b58a;
+  padding: 20px;
+}
+.progress{
+width: 100%;
+position: relative;
+height: auto;
+}
+hr{
+  width: 60%;
+  margin-left: 30%;
+  height: 2px;
+  text-align: end;
+  background-color: #b5b58a;
+  opacity: 0.7;
+}
+.progress::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  left: 30%;
+  height: 2px;
+  color: white;
+  background-color: white;
+  animation-name: ProgressLine;
+  animation-duration: 10s;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+animation-timing-function:ease-in-out;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0 0;
+}
+.main-text{
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+}
+.container .left_side{
+  width: 170px;
+}
+.container .left_side p{
+  font-size: 70px;
+}
+.container .left_side p span{
+  color: #f3f3ba;
+
+    font-weight: 500;
+}
+.container .right_side{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 60%;
+}
+.container .right_side .image-holder1{
+  width: 29%;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+.container .right_side .image-holder1 img{
+width: 100%;
+animation-name: img-Transform;
+animation-duration: 10s;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+animation-timing-function:ease-in-out;
+}
+.container .right_side .image-holder2{
+  width: 18%;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  height: 60%;
+
+}
+.container .right_side .image-holder2 img{
+width: 100%;
+animation-name: img-Transform;
+animation-duration: 10s;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+animation-timing-function:ease-in-out;
+}
+.container .right_side .image-holder3{
+  width: 12%;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  height: 30%;
+
+}
+.container .right_side .image-holder3 img{
+width: 100%;
+animation-name: img-Transform;
+animation-duration: 10s;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+animation-timing-function:ease-in-out;
+}
+@keyframes ProgressLine{
+  0%{
+    width: 1%;
+  }
+  80%{
+    width: 60%;
+  }
+  100%{
+    width:1%;
+  }
+}
+@keyframes ProgressLine2{
+  0%{
+    width: 1%;
+  }
+  80%{
+    width: 100%;
+  }
+  100%{
+    width:1%;
+  }
+}
+  @keyframes img-Transform {
+    0%{
+      transform: translateX(0);
+    }
+    2%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    4%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-100%);
+    }
+    15%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-100%);
+    }
+    17%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    19%{
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateX(-200%);
+    }
+    30%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-200%);
+    }
+    32%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    34%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-300%);
+    }
+    45%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-300%);
+    }
+    47%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    49%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-400%);
+    }
+    62%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-400%);
+    }
+    64%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    66%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-500%);
+    }
+    80%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(-500%);
+    }
+    88%{
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+    95%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+    100%{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+  }
+  
+@media (max-width:872px){
+  .container .right_side .image-holder3{
+    width: 18%;
+  }
+  .container .right_side .image-holder2{
+    width: 26%;
+  }
+  .container .right_side .image-holder1{
+    width: 40%;
+  }
+
+}
+@media (max-width:570px){
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .right_side .image-holder3 {
+  width: 12%;
+  height: 100px;
+}
+.container .right_side .image-holder2 {
+  width: 23%;
+  height: 200px;
+}
+.container .right_side .image-holder1 {
+  width: 45%;
+  height: 50vh;
+}
+  .container .left_side {
+    width: 265px;
+    text-align: center;
+}
+.container .right_side {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+hr {
+  width: 100%;
+  margin-left: 0;
+}
+.progress::before {
+  width: 100%;
+  left: 0px;
+  width: 1%;
+  animation-name: ProgressLine2;
+  
+}
+
+}
